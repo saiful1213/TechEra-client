@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 
 // The navbar will have website name with logo, Home, Add Product, My Cart, and Login.
-const Navbar = () => {
+const Navbar2 = () => {
    const navLinks = <>
       <NavLink
          to="/"
@@ -29,7 +29,7 @@ const Navbar = () => {
       </NavLink>
    </>
    return (
-      <div className="navbar absolute bg-transparent text-white max-w-7xl mx-auto left-0 right-0">
+      <div className="navbar max-w-7xl mx-auto bg-gray-800 text-white">
          <div className="navbar-start">
             <div className="dropdown">
                <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -53,4 +53,4 @@ const Navbar = () => {
    );
 };
 
-export default Navbar;
+export default Navbar2;
