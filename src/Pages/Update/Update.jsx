@@ -1,22 +1,26 @@
-import { toast } from "react-toastify";
+import { useLoaderData, useParams } from "react-router-dom";
 import Navbar2 from "../../Components/Navbar2/Navbar2";
 import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
 
-const AddProduct = () => {
+const Update = () => {
+   const { id } = useParams();
+   const loadedData = useLoaderData();
+   console.log(loadedData)
+   const { img, name, brand, option, price } = loadedData;
 
-   const handleAddProduct = e => {
+   const handleUpdateProduct = e => {
       e.preventDefault()
       const form = e.target;
       const name = form.name.value;
-      const brand = form.BOption.value;
+      const brand = form.BName.value;      
+      const option = form.option.value;
       const img = form.img.value;
       const price = form.price.value;
-      const option = form.option.value;
-      const desc = form.desc.value;
+      const product = { name, brand, img, price, option }
 
-      const product = { name, brand, img, price, option, desc }
-      fetch('http://localhost:5000/productadd', {
-         method: 'POST',
+      fetch(`http://localhost:5000/productadd/update/${id}`, {
+         method: 'PUT',
          headers: {
             'content-type': 'application/json'
          },
@@ -24,31 +28,31 @@ const AddProduct = () => {
       })
          .then(res => res.json())
          .then(data => {
-            console.log(data);
-            if (data.insertedId) {
-               toast("new product added succesfully!");
+            console.log(data)
+            if (data.modifiedCount > 0) {
+               toast.success('succesfully product updated')
             }
          })
    }
 
+
    return (
       <div className="max-w-7xl mx-auto">
          <Navbar2></Navbar2>
-         <h1 className="text-3xl font-bold text-center mt-12 mb-6">Add Your Product</h1>
-
+         <h1 className="text-3xl font-bold text-center mt-12 mb-6">Update Your Product</h1>
          <div className="card flex-shrink-0 w-full max-w-lg mx-auto shadow-2xl bg-base-100">
-            <form className="card-body" onSubmit={handleAddProduct}>
+            <form className="card-body" onSubmit={handleUpdateProduct}>
                <div className="form-control">
                   <label className="label">
                      <span className="label-text">Product Name</span>
                   </label>
-                  <input type="text" placeholder="your name" name="name" className="input input-bordered" required />
+                  <input type="text" placeholder="Product name" name="name" defaultValue={name} className="input input-bordered" />
                </div>
                <div className="form-control">
                   <label className="label">
                      <span className="label-text">Brand Name</span>
                   </label>
-                  <select className="border border-gray-300 rounded-lg p-4" name="BOption">
+                  <select className="border border-gray-300 rounded-lg p-4" defaultValue={brand} name="BName">
                      <option value="apple">apple</option>
                      <option value="samsung">samsung</option>
                      <option value="nokia">nokia</option>
@@ -61,7 +65,7 @@ const AddProduct = () => {
                   <label className="label">
                      <span className="label-text">Product Type</span>
                   </label>
-                  <select className="border border-gray-300 rounded-lg p-4" name="option">
+                  <select className="border border-gray-300 rounded-lg p-4" defaultValue={option} name="option">
                      <option value="phone">phone</option>
                      <option value="computer">computer</option>
                      <option value="headphone">headphone</option>
@@ -71,7 +75,7 @@ const AddProduct = () => {
                   <label className="label">
                      <span className="label-text">Image</span>
                   </label>
-                  <input type="text" placeholder="your image url" name="img" className="input input-bordered" required />
+                  <input type="text" placeholder="your image url" name="img" defaultValue={img} className="input input-bordered" />
                </div>
                <div>
                   <div className="flex items-center gap-6">
@@ -79,7 +83,7 @@ const AddProduct = () => {
                         <label className="label">
                            <span className="label-text">Price</span>
                         </label>
-                        <input type="text" placeholder="price" name="price" className="input input-bordered" required />
+                        <input type="text" placeholder="price" name="price" defaultValue={price} className="input input-bordered" />
                      </div>
                      <div className="form-control w-1/2">
                         <label className="label">
@@ -94,22 +98,14 @@ const AddProduct = () => {
                         </div>
                      </div>
                   </div>
-                  <div className="form-control">
-                     <label className="label">
-                        <span className="label-text">Description</span>
-                     </label>
-                     <textarea name="desc" rows="5" placeholder="Write Your Short Description...." className="border rounded-lg resize-none border-gray-300 p-4"></textarea>
-                  </div>
                </div>
                <div className="form-control mt-6">
-                  <button className="btn btn-primary">Add Product</button>
+                  <button className="btn btn-primary">Update</button>
                </div>
             </form>
          </div>
-
-
       </div>
    );
 };
 
-export default AddProduct;
+export default Update;

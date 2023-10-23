@@ -23,7 +23,7 @@ const Slider = ({ loadedData }) => {
                   if (slideContent.brand === 'intel') {
                      return ('')
                   } else {
-                     return (<SwiperSlide key={idx}><img src={slideContent.img} className='rounded-lg' /></SwiperSlide>)
+                     return (<SwiperSlide key={idx}><img src={slideContent.img} className='rounded-lg h-96' /></SwiperSlide>)
                   }
                })
             }

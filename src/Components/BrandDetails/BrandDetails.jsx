@@ -30,7 +30,7 @@ const BrandDetails = () => {
                   } else {
                      return (
                         <div key={data._id} className="p-4 shadow-lg">
-                           <img src={img} className="rounded-lg" />
+                           <img src={img} className="rounded-lg h-80" />
                            <h1 className="text-2xl font-bold mt-3 mb-2">{name}</h1>
                            <h2 className="text-xl font-semibold mb-1">Brand: {brand}</h2>
                            <p className="text-lg font-medium mb-1">Type: {option}</p>
@@ -42,7 +42,10 @@ const BrandDetails = () => {
                                  <button className="btn btn-secondary">Details</button>
                               </Link>
 
-                              <button className="btn btn-outline btn-secondary">Update</button>
+                              <Link to={`/update/${data._id}`}>
+                                 <button className="btn btn-outline btn-secondary">Update</button>
+                              </Link>
+
                            </div>
                         </div>)
                   }

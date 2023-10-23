@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar2 from "../../Components/Navbar2/Navbar2";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ProductDetail = () => {
    const loadedData = useLoaderData()
@@ -18,7 +20,7 @@ const ProductDetail = () => {
          .then(res => res.json())
          .then(data => {
             console.log(data)
-            alert('add to cart succesfully')
+            toast.success('add to cart succesfully')
          })
    }
 
@@ -26,7 +28,7 @@ const ProductDetail = () => {
       <div className="max-w-7xl mx-auto">
          <Navbar2></Navbar2>
          <div className="my-12 w-2/4 mx-auto text-center shadow-2xl p-6">
-            <img src={img} className="rounded-xl" />
+            <img src={img} className="rounded-xl"/>
             <h1 className="font-bold text-3xl my-3 ">Brand Name: {brand}</h1>
             <p className="font-bold my-2">Category: {option}</p>
             <p className="font-bold text-xl my-2">Price: ${price}</p>
