@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router-dom";
-import Navbar2 from "../../Components/Navbar2/Navbar2";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -26,7 +25,6 @@ const ProductDetail = () => {
 
    return (
       <div className="max-w-7xl mx-auto">
-         <Navbar2></Navbar2>
          <div className="my-12 w-2/4 mx-auto text-center shadow-2xl p-6">
             <img src={img} className="rounded-xl"/>
             <h1 className="font-bold text-3xl my-3 ">Brand Name: {brand}</h1>

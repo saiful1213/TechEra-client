@@ -1,5 +1,4 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Navbar2 from "../../Components/Navbar2/Navbar2";
 import { FcGoogle } from "react-icons/fc"
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
@@ -41,7 +40,6 @@ const Login = () => {
 
    return (
       <div className="max-w-7xl mx-auto">
-         <Navbar2></Navbar2>
          <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex flex-col">
                <h1 className="text-3xl font-bold mb-3">Please Login</h1>

@@ -2,7 +2,6 @@
 
 import { Link, useLoaderData } from "react-router-dom";
 import Slider from "../Slider/Slider";
-import Navbar2 from "../Navbar2/Navbar2";
 
 const BrandDetails = () => {
    const loadedData = useLoaderData();
@@ -10,8 +9,6 @@ const BrandDetails = () => {
 
    return (
       <div>
-
-         <Navbar2></Navbar2>
 
          <Slider loadedData={loadedData}></Slider>
 

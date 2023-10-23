@@ -1,5 +1,4 @@
 import { toast } from "react-toastify";
-import Navbar2 from "../../Components/Navbar2/Navbar2";
 import 'react-toastify/dist/ReactToastify.css';
 
 const AddProduct = () => {
@@ -33,7 +32,6 @@ const AddProduct = () => {
 
    return (
       <div className="max-w-7xl mx-auto">
-         <Navbar2></Navbar2>
          <h1 className="text-3xl font-bold text-center mt-12 mb-6">Add Your Product</h1>
 
          <div className="card flex-shrink-0 w-full max-w-lg mx-auto shadow-2xl bg-base-100">

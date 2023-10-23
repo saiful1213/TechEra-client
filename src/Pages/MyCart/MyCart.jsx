@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useLoaderData } from "react-router-dom";
-import Navbar2 from "../../Components/Navbar2/Navbar2";
 import { useState } from "react";
 import Swal from 'sweetalert2'
 
@@ -46,7 +45,6 @@ const MyCart = () => {
 
    return (
       <div className="max-w-7xl mx-auto">
-         <Navbar2></Navbar2>
          {
             products.length === 0 ? <h1 className="text-center font-bold text-3xl mt-24">You've No Product Added yet!!</h1>
 
