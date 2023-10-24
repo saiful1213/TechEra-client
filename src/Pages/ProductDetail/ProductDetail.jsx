@@ -25,7 +25,7 @@ const ProductDetail = () => {
 
    return (
       <div className="max-w-7xl mx-auto">
-         <div className="my-12 w-2/4 mx-auto text-center shadow-2xl p-6">
+         <div className="my-12 md:w-2/4 mx-auto text-center shadow-2xl p-6">
             <img src={img} className="rounded-xl"/>
             <h1 className="font-bold text-3xl my-3 ">Brand Name: {brand}</h1>
             <p className="font-bold my-2">Category: {option}</p>

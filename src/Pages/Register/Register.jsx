@@ -60,7 +60,7 @@ const Register = () => {
          <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex flex-col">
                <h1 className="text-3xl font-bold mb-3">Please Register</h1>
-               <div className="card flex-shrink-0 w-[400px] max-w-lg shadow-2xl bg-base-100">
+               <div className="card flex-shrink-0 w-full lg:w-[400px] max-w-lg shadow-2xl bg-base-100">
                   <form className="card-body" onSubmit={handleRegister}>
                      <div className="form-control">
                         <label className="label">
