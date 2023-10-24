@@ -11,6 +11,7 @@ const AuthProvider = ({ children }) => {
    const [user, setUser] = useState(null);
    const [loading, setLoading] = useState(true)
 
+
    // signupwithemailpass
    const signupwithemailpass = (email, password) => {
       setLoading(true)
@@ -56,7 +57,8 @@ const AuthProvider = ({ children }) => {
       user,
       signinwithGoogle,
       handleSignOut,
-      loading
+      loading,
+      setLoading
    }
    return (
       <AuthContext.Provider value={authInfo}>

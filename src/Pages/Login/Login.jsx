@@ -8,7 +8,6 @@ const Login = () => {
    const { signinwithemailpass, signinwithGoogle } = useContext(AuthContext)
    const navigate = useNavigate();
    const location = useLocation();
-   console.log(location)
 
    const handleLogin = e => {
       e.preventDefault();
