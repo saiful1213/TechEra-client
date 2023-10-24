@@ -21,7 +21,7 @@ const Brand = () => {
    }, [])
    return (
       <div className="max-w-7xl mx-auto mt-28 px-8 lg:px-0">
-         <h1 className="text-center font-bold my-6 text-4xl">Our Top Brands</h1>
+         <h1 className="text-center font-bold my-6 text-4xl dark:text-white">Our Top Brands</h1>
          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 my-12">
             {
                brands.slice(0, 6).map((brand, idx) =>

@@ -2,9 +2,12 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import { useTheme } from "../../Hook/useTheme";
+import {BsFillSunFill, BsMoonFill} from "react-icons/bs"
 
 const Navbar = () => {
    const { user, handleSignOut } = useContext(AuthContext);
+   const { theme, handleTheme } = useTheme();
 
    const handleLogOut = () => {
       handleSignOut()
@@ -41,7 +44,7 @@ const Navbar = () => {
       </NavLink>
    </>
 
-return (
+   return (
       <div className="w-full bg-gray-800 text-white">
          <div className="navbar max-w-7xl mx-auto">
             <div className="navbar-start">
@@ -61,6 +64,7 @@ return (
                </ul>
             </div>
             <div className="navbar-end">
+               <button className="py-2 px-4 rounded-lg border mr-5" onClick={handleTheme}>{theme === 'light' ? <BsMoonFill size={'1.2rem'}/> : <BsFillSunFill size={'1.2rem'}/>}</button>
                {
                   user
                      ?
