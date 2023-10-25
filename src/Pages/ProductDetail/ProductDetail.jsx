@@ -9,7 +9,7 @@ const ProductDetail = () => {
    const handleAddToCart = productData => {
       console.log(productData)
 
-      fetch(`http://localhost:5000/cartData`, {
+      fetch(`https://tech-era-server.vercel.app/cartData`, {
          method: 'POST',
          headers: {
             'content-type': 'application/json'

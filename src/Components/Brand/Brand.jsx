@@ -6,8 +6,7 @@ const Brand = () => {
 
 
    const handleBrand = brand => {
-      // console.log(brand)
-      fetch(`http://localhost:5000/productadd/${brand}`)
+      fetch(`https://tech-era-server.vercel.app/productadd/${brand}`)
          .then(res => res.json())
          .then(data => {
             console.log(data)
@@ -15,7 +14,7 @@ const Brand = () => {
    }
 
    useEffect(() => {
-      fetch('http://localhost:5000/productadd')
+      fetch('https://tech-era-server.vercel.app/productadd')
          .then(res => res.json())
          .then(data => setBrands(data))
    }, [])

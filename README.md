@@ -3,6 +3,7 @@
 
 # TechEra
 
+## project live link: https://techera-2bf61.web.app/
 
 ### About my project
 - In my project you'll find our best tech products

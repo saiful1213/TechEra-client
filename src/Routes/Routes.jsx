@@ -28,22 +28,22 @@ const Routes = createBrowserRouter([
          {
             path: '/brand_details/:brand',
             element: <BrandDetails></BrandDetails>,
-            loader: ({ params }) => fetch(`http://localhost:5000/productadd/${params.brand}`)
+            loader: ({ params }) => fetch(`https://tech-era-server.vercel.app/productadd/${params.brand}`)
          },
          {
             path: `/product_detail/:id`,
             element: <PrivateRoute><ProductDetail></ProductDetail></PrivateRoute>,
-            loader: ({ params }) => fetch(`http://localhost:5000/productadd/single/${params.id}`)
+            loader: ({ params }) => fetch(`https://tech-era-server.vercel.app/productadd/single/${params.id}`)
          },
          {
             path: `/mycart`,
             element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-            loader: () => fetch(`http://localhost:5000/cartData/products`)
+            loader: () => fetch(`https://tech-era-server.vercel.app/cartData/products`)
          },
          {
             path: '/update/:id',
             element: <PrivateRoute><Update></Update></PrivateRoute>,
-            loader: ({ params }) => fetch(`http://localhost:5000/productadd/update/${params.id}`)
+            loader: ({ params }) => fetch(`https://tech-era-server.vercel.app/productadd/update/${params.id}`)
          },
          {
             path: '/login',

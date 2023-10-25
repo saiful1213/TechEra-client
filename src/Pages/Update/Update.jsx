@@ -18,7 +18,7 @@ const Update = () => {
       const price = form.price.value;
       const product = { name, brand, img, price, option }
 
-      fetch(`http://localhost:5000/productadd/update/${id}`, {
+      fetch(`https://tech-era-server.vercel.app/productadd/update/${id}`, {
          method: 'PUT',
          headers: {
             'content-type': 'application/json'

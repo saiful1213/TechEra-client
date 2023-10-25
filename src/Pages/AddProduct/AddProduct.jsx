@@ -14,7 +14,7 @@ const AddProduct = () => {
       const desc = form.desc.value;
 
       const product = { name, brand, img, price, option, desc }
-      fetch('http://localhost:5000/productadd', {
+      fetch('https://tech-era-server.vercel.app/productadd', {
          method: 'POST',
          headers: {
             'content-type': 'application/json'

@@ -34,6 +34,7 @@ const Register = () => {
             })
             toast.success('user created succesfully!')
             navigate('/')
+            location.reload();
          })
          .catch(error => {
             console.log(error.message)
