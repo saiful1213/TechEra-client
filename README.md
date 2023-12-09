@@ -2,13 +2,13 @@
 
 
 # TechEra
+## Technology: React, tailwind css, express js, MongoDB
+### project live link: https://techera-2bf61.web.app/
 
-## project live link: https://techera-2bf61.web.app/
-
-### About my project
-- In my project you'll find our best tech products
-- also you will see blog about international technologies
-- Clicking on any brand you will see more of product specific the brand
-- On brand detail page you also able update the product and details of the product
-- Clicking on add to cart button the product will add on my cart page. there you will also able to delete the product from your cart
+### Project Features
+- In my project, you'll find our best tech products
+- also you will see a blog about international technologies
+- Clicking on any brand you will see more products specific to the brand
+- On the brand detail page you are also able to update the product and details of the product
+- Clicking on the add to cart button the product will be added to my cart page. there you will also be able to delete the product from your cart
 
